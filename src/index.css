@@ -34,6 +34,10 @@ code {
     monospace;
 }
 
+.inner-padding {
+  padding: 30px;
+}
+
 .navbar,
 .logo-container,
 .links {
@@ -77,4 +81,29 @@ a:active {
 
 .rocket {
   display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+
+.rocket-img {
+  max-width: 300px;
+}
+
+.rocket-img img {
+  max-width: 300px;
+}
+
+.rocket-info {
+  width: 100%;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rocket-info h1 {
+  margin-bottom: 20px;
+}
+
+.button-div {
+  margin-top: 20px;
 }

@@ -14,7 +14,7 @@ const Rockets = () => {
   }, []);
 
   return (
-    <section>
+    <section className="inner-padding">
       {rockets && rockets.map((rocket) => (
         <div className="rocket" key={rocket.id}>
           <div className="rocket-img">
