@@ -14,19 +14,22 @@ const Rockets = () => {
   }, []);
 
   return (
-    <div>
+    <section>
       {rockets && rockets.map((rocket) => (
-        <li key={rocket.id}>
-          {rocket.description}
-          {' '}
-          <br />
-          <br />
-          <br />
-        </li>
-
+        <div className="rocket" key={rocket.id}>
+          <div className="rocket-img">
+            <img src={rocket.flickr_images[0]} alt="rocket" />
+          </div>
+          <div className="rocket-info">
+            <h1>{rocket.rocket_name}</h1>
+            <p>{rocket.description}</p>
+            <div className="button-div">
+              <button type="button">Reserve Rocket</button>
+            </div>
+          </div>
+        </div>
       ))}
-      {/* {rockets ? console.log('rockets', rockets) : console.log('no rockets', rockets)} */}
-    </div>
+    </section>
   );
 };
 
