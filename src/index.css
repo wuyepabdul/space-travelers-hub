@@ -107,3 +107,16 @@ a:active {
 .button-div {
   margin-top: 20px;
 }
+
+.button-div button {
+  padding: 10px 15px;
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.button-div button:hover {
+  cursor: pointer;
+  background-color: rgb(11, 11, 99);
+}
