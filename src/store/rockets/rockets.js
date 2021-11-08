@@ -11,7 +11,6 @@ export const getRocketsAction = () => async (dispatch) => {
   try {
     dispatch({ type: GET_ROCKETS });
     const rockets = await axios.get(`${baseUrl}`);
-    console.log(rockets);
     dispatch({ type: SET_ROCKETS, payload: rockets });
   } catch (error) {
     dispatch({ type: ERROR_ROCKETS, payload: error.message });

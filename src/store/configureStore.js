@@ -12,7 +12,7 @@ const middlwares = [thunk, logger];
 
 const configureStore = createStore(
   reducers,
-  applyMiddleware(composeWithDevTools(...middlwares)),
+  composeWithDevTools(applyMiddleware(...middlwares)),
 );
 
 export default configureStore;
