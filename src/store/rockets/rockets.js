@@ -10,8 +10,18 @@ export const getRocketsAction = () => async (dispatch) => {
   const baseUrl = 'https://api.spacexdata.com/v3/rockets';
   try {
     dispatch({ type: GET_ROCKETS });
+    const newRocketList = [];
     const { data } = await axios.get(`${baseUrl}`);
-    dispatch({ type: SET_ROCKETS, payload: data });
+    data.map((item) => {
+      const rocketObj = {
+        id: item.id,
+        rocket_name: item.rocket_name,
+        description: item.description,
+        flickr_images: item.flickr_images[0],
+      };
+      return newRocketList.push(rocketObj);
+    });
+    dispatch({ type: SET_ROCKETS, payload: newRocketList });
   } catch (error) {
     dispatch({ type: ERROR_ROCKETS, payload: error.message });
   }
