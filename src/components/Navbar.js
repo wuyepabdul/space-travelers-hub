@@ -33,7 +33,7 @@ const Navbar = () => {
       <ul className="links">
         {links.map((link) => (
           <li key={link.id} className={link.name}>
-            <NavLink to={link.path}>
+            <NavLink exact to={link.path} activeClassName="active-link">
               {link.text}
             </NavLink>
           </li>

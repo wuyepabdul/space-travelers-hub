@@ -48,6 +48,15 @@ code {
   padding: 0 10px;
 }
 
+.active-link {
+  color: blue;
+  text-decoration: underline;
+}
+
+a:active {
+  color: blue;
+}
+
 .missions {
   border-right: 2px solid black;
 }
