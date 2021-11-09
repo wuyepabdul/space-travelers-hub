@@ -35,7 +35,6 @@ const MissionReducer = (state = initialState, action) => {
         if (mission.mission_id !== action.payload) { return mission; }
         return { ...mission, reserved: false };
       });
-      console.log(leaveState);
       return leaveState;
     default:
       return state;
