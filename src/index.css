@@ -104,6 +104,14 @@ a:active {
   margin-bottom: 20px;
 }
 
+.reserve-badge {
+  background-color: rgb(34, 209, 209);
+  margin-right: 10px;
+  padding: 3px;
+  border-radius: 2px;
+
+}
+
 .button-div {
   margin-top: 20px;
 }
