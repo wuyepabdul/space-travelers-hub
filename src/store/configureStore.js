@@ -7,7 +7,7 @@ import { MissionReducer } from './missions/missionsReducer';
 
 const reducers = combineReducers({
   rockets: rocketsReducer,
-  MissionReducer,
+  missions: MissionReducer,
 });
 
 const middlwares = [thunk, logger];
