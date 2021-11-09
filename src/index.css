@@ -140,3 +140,23 @@ a:active {
   cursor: pointer;
   background-color: rgb(193, 197, 197);
 }
+
+.my-profile {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-container {
+  border: 1px solid grey;
+  border-radius: 3px;
+  background-color: aqua;
+}
+
+.list-container li:nth-child(n) {
+  border-bottom: 1px solid grey;
+  padding: 10px 10px 15px 10px;
+}
+
+.list-container li:last-child {
+  border-bottom: none;
+}
