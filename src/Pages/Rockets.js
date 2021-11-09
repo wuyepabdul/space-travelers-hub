@@ -10,11 +10,10 @@ const Rockets = () => {
   const dispatch = useDispatch();
   const { rockets } = useSelector((state) => state.rockets);
 
-  const loadRockets = () => {
-    dispatch(getRocketsAction());
-  };
   useEffect(() => {
-    loadRockets();
+    if (!rockets) {
+      dispatch(getRocketsAction());
+    }
   }, []);
 
   const setReserve = (id) => {
