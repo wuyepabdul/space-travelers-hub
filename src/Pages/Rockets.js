@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getRocketsAction } from '../store/rockets/rockets';
+import { getRocketsAction, setReserveAction } from '../store/rockets/rockets';
 
 const Rockets = () => {
   const dispatch = useDispatch();
@@ -13,6 +13,10 @@ const Rockets = () => {
     loadRockets();
   }, []);
 
+  const setReserve = (id) => {
+    dispatch(setReserveAction(id));
+  };
+
   return (
     <section className="inner-padding">
       {rockets && rockets.map((rocket) => (
@@ -24,7 +28,7 @@ const Rockets = () => {
             <h1>{rocket.rocket_name}</h1>
             <p>{rocket.description}</p>
             <div className="button-div">
-              <button type="button">Reserve Rocket</button>
+              <button onClick={() => setReserve(rocket.id)} type="button">Reserve Rocket</button>
             </div>
           </div>
         </div>
