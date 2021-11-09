@@ -1,11 +1,11 @@
 # Space Travelers' Hub
 This web application is built for a company that provides commercial and scientific space travel services. The application allows users to book rockets and join selected space missions.
 
-![Rockets Page](./images/Screenshot1.png)
+![Rockets Page](./src/images/Screenshot1.png)
 
-![Missions Page](./images/Screenshot2.png)
+![Missions Page](./src/images/Screenshot2.png)
 
-![My Profile Page](./images/Screenshot3.png)
+![My Profile Page](./src/images/Screenshot3.png)
 
 ## Built With
 - JavaScript/React
@@ -30,7 +30,7 @@ This web application is built for a company that provides commercial and scienti
 - Twitter: [@chaw36422087](https://twitter.com/chaw36422087)
 - LinkedIn: [Chawanzi Ng'uni](https://www.linkedin.com/in/chawanzi-ng-uni-449328212/)
 
-👤 ****
+👤 **Wuyep Abdul**
 
 - GitHub: [@wuyepabdul](https://github.com/wuyepabdul)
 - Twitter: [@AbdulWuyep](https://twitter.com/AbdulWuyep)
