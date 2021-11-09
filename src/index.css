@@ -35,7 +35,7 @@ code {
 }
 
 .inner-padding {
-  padding: 30px;
+  padding: 30px 50px;
 }
 
 .navbar,
@@ -124,6 +124,10 @@ a:active {
   margin-bottom: 20px;
 }
 
+.rocket-info p {
+  line-height: 25px;
+}
+
 .reserve-badge {
   background-color: rgb(34, 209, 209);
   margin-right: 10px;
@@ -162,14 +166,24 @@ a:active {
 }
 
 .my-profile {
+  width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.missions-container {
+  width: 100%;
+  margin-right: 20px;
+}
+
+.rockets-container {
+  width: 100%;
+  margin-left: 20px;
 }
 
 .list-container {
   border: 1px solid grey;
   border-radius: 3px;
-  background-color: aqua;
 }
 
 .list-container li:nth-child(n) {
