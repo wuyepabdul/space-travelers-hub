@@ -41,10 +41,30 @@ code {
   align-items: center;
 }
 
-.navbar {
-  justify-content: space-between;
+.navbar,
+.mission-table {
   padding: 10px 20px;
   margin: 0 30px;
+}
+
+.mission-table {
+  margin-top: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid silver;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+th {
+  text-align: start;
+}
+
+.navbar {
+  justify-content: space-between;
   border-bottom: 2px solid rgb(201, 193, 193);
 }
 
@@ -73,4 +93,36 @@ a:active {
 
 .missions {
   border-right: 2px solid black;
+}
+
+.missionDescription {
+  width: 60%;
+}
+
+.missionStatus,
+.missionJoin {
+  text-align: center;
+}
+
+.joinButton {
+  background-color: transparent;
+  border: 1px solid rgb(201, 193, 193);
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.missionName {
+  font-weight: bold;
+}
+
+.statusButton {
+  color: #ffff;
+  border: none;
+  background-color: grey;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+  background-color: lightgrey;
 }
