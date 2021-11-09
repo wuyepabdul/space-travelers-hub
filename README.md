@@ -30,11 +30,11 @@ This web application is built for a company that provides commercial and scienti
 - Twitter: [@chaw36422087](https://twitter.com/chaw36422087)
 - LinkedIn: [Chawanzi Ng'uni](https://www.linkedin.com/in/chawanzi-ng-uni-449328212/)
 
-👤 **Wuyep Abdul**
+👤 **Abdul Wuyep**
 
 - GitHub: [@wuyepabdul](https://github.com/wuyepabdul)
 - Twitter: [@AbdulWuyep](https://twitter.com/AbdulWuyep)
-- LinkedIn: []()
+- LinkedIn: [Abdul Wuyep](https://www.linkedin.com/in/abdul-wuyep/)
 
 ## 🤝 Contributing
 
