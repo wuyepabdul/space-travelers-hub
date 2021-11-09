@@ -4,6 +4,7 @@ import axios from 'axios';
 const GET_ROCKETS = 'space-trevelers-hub/rockets/GET_ROCKETS';
 const SET_ROCKETS = 'space-travelers-hub/rockets/SET_ROCKETS';
 const SET_RESERVES = 'space-travelers-hub/rockets/SET_RESERVES';
+const CANCEL_RESERVES = 'space-travelers-hub/rockets/CANCEL_RESERVES';
 const ERROR_ROCKETS = 'space-travelers-hub/rockets/ERROR_ROCKETS';
 
 const initialState = { rockets: null };
@@ -37,6 +38,14 @@ export const setReserveAction = (rocketId) => (dispatch) => {
   }
 };
 
+export const cancelReservationAction = (rocketId) => (dispatch) => {
+  try {
+    dispatch({ type: CANCEL_RESERVES, payload: rocketId });
+  } catch (error) {
+    dispatch({ type: ERROR_ROCKETS, payload: error.message });
+  }
+};
+
 export default function rocketsReducer(state = initialState, action) {
   switch (action.type) {
     case GET_ROCKETS:
@@ -51,6 +60,15 @@ export default function rocketsReducer(state = initialState, action) {
         return { ...rocket, reserved: true };
       });
       return { ...state, rockets: newState };
+    case CANCEL_RESERVES:
+      const newRocketsState = state.rockets.map((rocket) => {
+        if (rocket.id !== action.payload) {
+          return rocket;
+        }
+        return { ...rocket, reserved: false };
+      });
+      return { ...state, rockets: newRocketsState };
+
     default:
       return state;
   }

@@ -124,11 +124,18 @@ a:active {
   margin-bottom: 20px;
 }
 
+.reserve-badge {
+  background-color: rgb(34, 209, 209);
+  margin-right: 10px;
+  padding: 3px;
+  border-radius: 2px;
+}
+
 .button-div {
   margin-top: 20px;
 }
 
-.button-div button {
+.reserve-btn {
   padding: 10px 15px;
   background-color: blue;
   border: none;
@@ -136,9 +143,42 @@ a:active {
   color: #fff;
 }
 
-.button-div button:hover {
+.reserve-btn:hover {
   cursor: pointer;
   background-color: rgb(11, 11, 99);
+}
+
+.cancel-reserve-btn {
+  background-color: rgb(228, 228, 236);
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.cancel-reserve-btn:hover {
+  cursor: pointer;
+  background-color: rgb(193, 197, 197);
+}
+
+.my-profile {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-container {
+  border: 1px solid grey;
+  border-radius: 3px;
+  background-color: aqua;
+}
+
+.list-container li:nth-child(n) {
+  border-bottom: 1px solid grey;
+  padding: 10px 10px 15px 10px;
+}
+
+.list-container li:last-child {
+  border-bottom: none;
 }
 
 .missionDescription {
