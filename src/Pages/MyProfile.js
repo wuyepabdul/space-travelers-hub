@@ -1,14 +1,22 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getRocketsAction } from '../store/rockets/rockets';
+import FetchMission from '../store/missions/missionsAPI';
 
 const MyProfile = () => {
   const dispatch = useDispatch();
   const { rockets } = useSelector((state) => state.rockets);
+  const missions = useSelector((state) => state.missions);
 
   useEffect(() => {
     if (!rockets) {
       dispatch(getRocketsAction());
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!missions) {
+      dispatch(FetchMission());
     }
   }, []);
 
@@ -17,9 +25,12 @@ const MyProfile = () => {
       <div className="missions-container">
         <h1>My Missions</h1>
         <ul className="list-container">
-          <li>mission</li>
-          <li>mission</li>
-          <li>mission</li>
+          {missions
+            && missions
+              .filter((mission) => mission.reserved)
+              .map((picked) => (
+                <li key={picked.id}>{picked.mission_name}</li>
+              ))}
         </ul>
       </div>
       <div className="rockets-container">
@@ -28,7 +39,9 @@ const MyProfile = () => {
           {rockets
             && rockets
               .filter((rocket) => rocket.reserved)
-              .map((filtered) => (<li key={filtered.id}>{filtered.rocket_name}</li>))}
+              .map((filtered) => (
+                <li key={filtered.id}>{filtered.rocket_name}</li>
+              ))}
         </ul>
       </div>
     </section>

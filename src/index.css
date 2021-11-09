@@ -224,5 +224,21 @@ a:active {
 }
 
 tr:nth-child(even) {
-  background-color: lightgrey;
+  background-color: rgb(224, 222, 222);
+}
+
+.activeStatusButton {
+  background-color: lightseagreen;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.leaveButton {
+  color: red;
+  border-color: red;
+  background-color: transparent;
+  border-radius: 3px;
+  padding: 5px;
 }
