@@ -1,30 +1,16 @@
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import FetchMission from '../../store/missions/missionsAPI';
 import { GetMissions } from '../../store/missions/missionsReducer';
+import MissionDetails from './MissionDetails';
 
 const MissionTable = () => {
-  const MissionStore = useSelector((store) => store.MissionReducer);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
     FetchMission()
       .then((response) => dispatch(GetMissions(response)));
   }, []);
-
-  const details = MissionStore.map((mission) => (
-    <tr key={mission.mission_id}>
-      <td className="missionName">{mission.mission_name}</td>
-      <td className="missionDescription">{mission.description}</td>
-      <td className="missionStatus">
-        <button className="statusButton" type="button">NOT A MEMBER</button>
-      </td>
-      <td className="missionJoin">
-        <button type="button" className="joinButton">Join Mission</button>
-      </td>
-    </tr>
-  ));
 
   const columns = [
     {
@@ -60,9 +46,7 @@ const MissionTable = () => {
           ))}
         </tr>
       </tbody>
-      <tbody>
-        {details}
-      </tbody>
+      <MissionDetails />
     </table>
   );
 };
