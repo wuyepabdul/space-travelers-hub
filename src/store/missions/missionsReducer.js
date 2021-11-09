@@ -1,5 +1,3 @@
-import { combineReducers } from 'redux';
-
 /* eslint-disable no-case-declarations */
 const GET_MISSIONS = 'space-trevelers-hub/missions/GET_MISSIONS';
 const JOIN_MISSIONS = 'space-trevelers-hub/missions/JOIN_MISSIONS';
@@ -27,15 +25,11 @@ const MissionReducer = (state = initialState, action) => {
     case GET_MISSIONS:
       return [...state.concat(action.payload)];
     case JOIN_MISSIONS:
-      console.log(combineReducers);
-      const newState = state.missions.map((mission) => {
-        // if (mission.mission_id !== action.payload) { return mission; }
-        // return { ...mission, reserved: true };
-        console.log(mission);
-        return state;
+      const newState = state.map((mission) => {
+        if (mission.mission_id !== action.payload) { return mission; }
+        return { ...mission, reserved: true };
       });
-      console.log(newState);
-      return state;
+      return newState;
     case LEAVE_MISSIONS:
       return [...state.filter((mission) => mission.mission_id !== action.payload.mission_id)];
     default:
