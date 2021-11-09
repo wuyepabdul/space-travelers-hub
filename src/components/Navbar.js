@@ -25,7 +25,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="navbar">
+    <nav data-testid="navbar" className="navbar">
       <header className="logo-container">
         <img src={planet} alt="Logo" className="logo" />
         <h1 className="title">Space Travelers&rsquo; Hub</h1>

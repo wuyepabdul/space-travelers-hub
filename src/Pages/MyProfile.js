@@ -29,7 +29,7 @@ const MyProfile = () => {
             && missions
               .filter((mission) => mission.reserved)
               .map((picked) => (
-                <li key={picked.id}>{picked.mission_name}</li>
+                <li key={picked.mission_id}>{picked.mission_name}</li>
               ))}
         </ul>
       </div>
