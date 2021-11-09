@@ -23,7 +23,7 @@ const MissionDetails = () => {
         {!mission.reserved ? (
           <button className="statusButton" type="button">NOT A MEMBER</button>
         ) : (
-          <button className="statusButton" type="button"> ACTIVE MEMBER</button>
+          <button className="activeStatusButton" type="button"> ACTIVE MEMBER</button>
         )}
       </td>
       <td className="missionJoin">
@@ -39,7 +39,7 @@ const MissionDetails = () => {
           <button
             onClick={() => handleLeaveMission(mission.mission_id)}
             type="button"
-            className="joinButton"
+            className="leaveButton"
           >
             Leave Mission
           </button>
