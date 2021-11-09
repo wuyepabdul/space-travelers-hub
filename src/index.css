@@ -108,7 +108,7 @@ a:active {
   margin-top: 20px;
 }
 
-.button-div button {
+.reserve-btn {
   padding: 10px 15px;
   background-color: blue;
   border: none;
@@ -116,7 +116,20 @@ a:active {
   color: #fff;
 }
 
-.button-div button:hover {
+.reserve-btn:hover {
   cursor: pointer;
   background-color: rgb(11, 11, 99);
+}
+
+.cancel-reserve-btn {
+  background-color: rgb(228, 228, 236);
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.cancel-reserve-btn:hover {
+  cursor: pointer;
+  background-color: rgb(193, 197, 197);
 }

@@ -28,7 +28,8 @@ const Rockets = () => {
             <h1>{rocket.rocket_name}</h1>
             <p>{rocket.description}</p>
             <div className="button-div">
-              <button onClick={() => setReserve(rocket.id)} type="button">Reserve Rocket</button>
+              <button className={!rocket.reserved ? 'reserve-btn' : 'cancel-reserve-btn'} onClick={() => setReserve(rocket.id)} type="button">{!rocket.reserved ? 'Reserve' : 'Cancel Reserve'}</button>
+
             </div>
           </div>
         </div>
