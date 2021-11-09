@@ -34,6 +34,10 @@ code {
     monospace;
 }
 
+.inner-padding {
+  padding: 30px;
+}
+
 .navbar,
 .logo-container,
 .links {
@@ -93,6 +97,48 @@ a:active {
 
 .missions {
   border-right: 2px solid black;
+}
+
+.rocket {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+
+.rocket-img {
+  max-width: 300px;
+}
+
+.rocket-img img {
+  max-width: 300px;
+}
+
+.rocket-info {
+  width: 100%;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rocket-info h1 {
+  margin-bottom: 20px;
+}
+
+.button-div {
+  margin-top: 20px;
+}
+
+.button-div button {
+  padding: 10px 15px;
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.button-div button:hover {
+  cursor: pointer;
+  background-color: rgb(11, 11, 99);
 }
 
 .missionDescription {
