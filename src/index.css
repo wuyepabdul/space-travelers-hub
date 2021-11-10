@@ -1,0 +1,245 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
+    monospace;
+}
+
+.inner-padding {
+  padding: 30px 50px;
+}
+
+.navbar,
+.logo-container,
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar,
+.mission-table {
+  padding: 10px 20px;
+  margin: 0 30px;
+}
+
+.mission-table {
+  margin-top: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid silver;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+th {
+  text-align: start;
+}
+
+.navbar {
+  justify-content: space-between;
+  border-bottom: 2px solid rgb(201, 193, 193);
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+.title {
+  padding-left: 15px;
+  font-size: 30px;
+}
+
+.links li {
+  padding: 0 10px;
+}
+
+.active-link {
+  color: blue;
+  text-decoration: underline;
+}
+
+a:active {
+  color: blue;
+}
+
+.missions {
+  border-right: 2px solid black;
+}
+
+.rocket {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+
+.rocket-img {
+  max-width: 300px;
+}
+
+.rocket-img img {
+  max-width: 300px;
+}
+
+.rocket-info {
+  width: 100%;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rocket-info h1 {
+  margin-bottom: 20px;
+}
+
+.rocket-info p {
+  line-height: 25px;
+}
+
+.reserve-badge {
+  background-color: rgb(34, 209, 209);
+  margin-right: 10px;
+  padding: 3px;
+  border-radius: 2px;
+}
+
+.button-div {
+  margin-top: 20px;
+}
+
+.reserve-btn {
+  padding: 10px 15px;
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.reserve-btn:hover {
+  cursor: pointer;
+  background-color: rgb(11, 11, 99);
+}
+
+.cancel-reserve-btn {
+  background-color: rgb(228, 228, 236);
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.cancel-reserve-btn:hover {
+  cursor: pointer;
+  background-color: rgb(193, 197, 197);
+}
+
+.my-profile {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.missions-container {
+  width: 100%;
+  margin-right: 20px;
+}
+
+.rockets-container {
+  width: 100%;
+  margin-left: 20px;
+}
+
+.list-container {
+  border: 1px solid grey;
+  border-radius: 3px;
+}
+
+.list-container li:nth-child(n) {
+  border-bottom: 1px solid grey;
+  padding: 10px 10px 15px 10px;
+}
+
+.list-container li:last-child {
+  border-bottom: none;
+}
+
+.missionDescription {
+  width: 60%;
+}
+
+.missionStatus,
+.missionJoin {
+  text-align: center;
+}
+
+.joinButton {
+  background-color: transparent;
+  border: 1px solid rgb(201, 193, 193);
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.missionName {
+  font-weight: bold;
+}
+
+.statusButton {
+  color: #ffff;
+  border: none;
+  background-color: grey;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(224, 222, 222);
+}
+
+.activeStatusButton {
+  background-color: lightseagreen;
+  color: white;
+  border: none;
+}
+
+.statusButton,
+.activeStatusButton,
+.leaveButton {
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.leaveButton {
+  color: red;
+  border-color: red;
+  background-color: transparent;
+}
