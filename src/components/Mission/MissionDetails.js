@@ -8,8 +8,10 @@ const MissionDetails = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    FetchMission()
-      .then((response) => dispatch(GetMissions(response)));
+    if (MissionStore.length === 0) {
+      FetchMission()
+        .then((response) => dispatch(GetMissions(response)));
+    }
   }, []);
 
   const handleJoinMission = (id) => {
