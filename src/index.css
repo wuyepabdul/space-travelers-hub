@@ -219,8 +219,6 @@ a:active {
   color: #ffff;
   border: none;
   background-color: grey;
-  border-radius: 3px;
-  padding: 5px;
 }
 
 tr:nth-child(even) {
@@ -231,6 +229,11 @@ tr:nth-child(even) {
   background-color: lightseagreen;
   color: white;
   border: none;
+}
+
+.statusButton,
+.activeStatusButton,
+.leaveButton {
   border-radius: 3px;
   padding: 5px;
 }
@@ -239,6 +242,4 @@ tr:nth-child(even) {
   color: red;
   border-color: red;
   background-color: transparent;
-  border-radius: 3px;
-  padding: 5px;
 }
