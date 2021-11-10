@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { JoinMissions, LeaveMissions } from '../../store/missions/missionsReducer';
+import FetchMission from '../../store/missions/missionsAPI';
+import { GetMissions, JoinMissions, LeaveMissions } from '../../store/missions/missionsReducer';
 
 const MissionDetails = () => {
   const MissionStore = useSelector((store) => store.missions);
-
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    FetchMission()
+      .then((response) => dispatch(GetMissions(response)));
+  }, []);
 
   const handleJoinMission = (id) => {
     dispatch(JoinMissions(id));

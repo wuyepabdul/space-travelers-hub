@@ -7,8 +7,8 @@ import {
 } from '../store/rockets/rockets';
 
 const Rockets = () => {
-  const dispatch = useDispatch();
   const { rockets } = useSelector((state) => state.rockets);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (!rockets) {
