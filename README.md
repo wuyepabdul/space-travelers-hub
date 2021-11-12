@@ -13,6 +13,10 @@ This web application is built for a company that provides commercial and scienti
 - React Router
 - JSX
 - CSS
+
+## Live Demo
+
+[View Life](https://duls-travelers-hub.herokuapp.com/)
   
 ## Setup
 - Get the link of the repository: [https://github.com/wuyepabdul/space-travelers-hub](https://github.com/wuyepabdul/space-travelers-hub)
